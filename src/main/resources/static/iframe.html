@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<!--
+iframe
+-->
+<html>
+    <head>
+        <title>Techshop</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="css/estilos.css" rel="stylesheet" type="text/css"/>
+    </head>
+    <body>
+        <header> <!-- Encabezado -->
+            <nav>
+                <ul class="nav-menu">                <!-- esto es para después de interactuar -->
+                    <li class="nav-menu-item"><a class="nav-menu-link" href="video.html">Atrás</a></li> <!-- menu-item, esto es lo de interactuar -->
+                    <li class="nav-menu-item"><a class="nav-menu-link" href="iframe.html">Siguiente</a></li>
+                    <li class="nav-menu-item"><a class="nav-menu-link" href="ejemplo1.html">Ejemplo1</a></li>
+                    <li class="nav-menu-item"><a class="nav-menu-link" href="ejemplo2.html">Ejemplo2</a></li>
+                    <li class="nav-menu-item"><a class="nav-menu-link" href="ejemplo3.html">Ejemplo3</a></li>
+                    <li class="nav-menu-item"><a class="nav-menu-link" href="Index.html">Inicio</a></li>
+                </ul>
+            </nav>
+        </header>
+        <aside class="aside"> <!-- Menú pequeño -->
+            <h2>Uso de iframes</h2>
+            <p>Este ejemplo nos va a permitir entender mejor como funcionan los iframes en html</p> 
+        </aside>
+        <section>
+            <article>
+                <h2>Iframe de tipo web</h2>
+                <p>Este iframe hace referencia a páginas web</p>
+            </article> <!-- El link sería básicamente cualquiera -->
+            <iframe src="https://sistemas.ufidelitas.ac.cr/" width="100" height="400"> 
+
+            </iframe>
+            <article>
+                <h2>Iframe de tipo Youtube</h2>
+                <p>Este iframe hace referencia a videos de Youtube</p>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/xhvquwKsEnM?si=HFPlqOwF2l2SMDoX" 
+                        title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+
+                </iframe>
+            </article> 
+            <article>
+                <h2>Iframe de tipo Google Maps</h2>
+                <p>Este iframe hace referencia a un mapa</p>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d157461.6395729461!2d4.17900760727637!3d51.927785956960406!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c5b7605f54c47d%3A0x5229bbac955e4b85!2zUsOzdGVyZGFtLCBQYcOtc2VzIEJham9z!5e0!3m2!1ses-419!2scr!4v1748577937876!5m2!1ses-419!2scr"
+                        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+
+                </iframe>
+            </article> <!-- El link sería básicamente cualquiera -->
+        </section>
+    </body>
+</html>

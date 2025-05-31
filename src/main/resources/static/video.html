@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<!--
+Video
+-->
+<html>
+    <head>
+        <title>Techshop</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="css/estilos.css" rel="stylesheet" type="text/css"/>
+    </head>
+    <body>
+        <header> <!-- Encabezado -->
+            <nav>
+                <ul class="nav-menu">                <!-- esto es para después de interactuar -->
+                    <li class="nav-menu-item"><a class="nav-menu-link" href="audio.html">Atrás</a></li> <!-- menu-item, esto es lo de interactuar -->
+                    <li class="nav-menu-item"><a class="nav-menu-link" href="imagenes.html">Siguiente</a></li>
+                    <li class="nav-menu-item"><a class="nav-menu-link" href="ejemplo1.html">Ejemplo1</a></li>
+                    <li class="nav-menu-item"><a class="nav-menu-link" href="ejemplo2.html">Ejemplo2</a></li>
+                    <li class="nav-menu-item"><a class="nav-menu-link" href="ejemplo3.html">Ejemplo3</a></li>
+                    <li class="nav-menu-item"><a class="nav-menu-link" href="Index.html">Inicio</a></li>
+                </ul>
+            </nav>
+        </header>
+        <aside class="aside"> <!-- Menú pequeño -->
+            <h2>Uso de Videos</h2>
+            <p>Este ejemplo nos va a permitir entender mejor como funcionan los videos en html</p> 
+        </aside>
+        <section>
+            <h2>Ahora vamos a ver el ejemplo de un audio</h2>
+            <figure> <!-- Se indica con dos puntos si es que no se puede leer -->
+                
+                <video width="400" height="600" controls>
+                    <source src="video/torpedo.mp4" type="video/mp4">
+                    Your browser does not support the <code>video</code> tag.
+                </video>
+                
+                <figcaption>Nuestro video trata sobre un torpedo</figcaption>
+            </figure>
+        </section>
+        <footer> <!-- Pie de Página -->
+            <p>Derechos Reservados Clase Progra Web Jueves &COPY;</p> <!-- &COPY; para el símbolo del copyright -->
+        </footer>
+    </body>
+</html>

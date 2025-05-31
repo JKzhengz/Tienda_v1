@@ -2,15 +2,37 @@
 <!-- comentario -->
 <html>
     <head>
+        <link rel="stylesheet" href="css/estilos.css" type="text/css"/>
+
         <title>TechShop</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
-    <body>
-        <a href="ejemplo1.html">Ejemplo 1</a> <!--Hace referencia a otros html, lo que se ve es lo que está en el medio de <a> aqui </a> -->
-        <a href="ejemplo2.html">Ejemplo 2</a>
-        <a href="ejemplo3.html">Ejemplo 3</a>
-        <h1>Ejemplo de Página de Inicio</h1>
-        <p>Nuestra primera página de tipo Inicio</p>
+    <body> <!-- Para hacer un menú -->
+        <header class="header">
+            <nav>
+                <ul class="nav-menu">
+                    <li class="nav-menu-item"><a class="nav -menu-link" href="iframe.html">Atras</a></li>
+                    <li class="nav-menu-item"><a class="nav-menu-link" href="ejemplo1.html">Siguiente</a></li>
+                    <li class="nav-menu-item"><a class="nav-menu-link" href="ejemplo1.html">Ejemplo1</a></li>
+                    <li class="nav-menu-item"><a class="nav-menu-link" href="ejemplo2.html">Ejemplo2</a></li>
+                    <li class="nav-menu-item"><a class="nav-menu-link" href="ejemplo3.html">Ejemplo3</a></li>
+                    <li class="nav-menu-item"><a class="nav-menu-link" href="Index.html">Inicio</a></li>
+                </ul>
+            </nav>
+        </header>
+        <aside class="aside">
+            <h2>El Index</h2>
+            <p>Esre es el Index</p>
+        </aside>
+        <section>
+            <h1>Ejemplo de Página de Inicio</h1>
+            <p>Nuestra primera página de tipo Inicio</p>
+        </section>
+        <footer> <!-- Pie de Página -->
+            <p>Derechos Reservados Clase Progra Web Jueves &COPY;</p> <!-- &COPY; para el símbolo del copyright -->
+        </footer>
     </body>
 </html>
+
+<!--<a href="ejemplo1.html">Ejemplo 1</a> Hace referencia a otros html, lo que se ve es lo que está en el medio de <a> aqui </a> -->
