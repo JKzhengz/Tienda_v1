@@ -1,7 +1,9 @@
 //interfaz producto service
 package com.tienda.service;
-import com.tienda.domain.Producto; 
+
 import java.util.List;
+import com.tienda.domain.Producto; 
+import org.springframework.data.repository.query.Param;
 
 public interface ProductoService {
     //Se asigna el metodo para después implementarlo en el serviceImpl (Read)
@@ -12,4 +14,10 @@ public interface ProductoService {
     public void save(Producto producto); //lo guarda
     
     public void delete(Producto producto); //elimina
+    
+    public List<Producto> findByPrecioBetweenOrderByDescripcion(double precioInf, double precioSup);
+    
+    public List<Producto> metodoJPQL(@Param("precioInf") double precioInf, @Param("precioSup") double precioSup);
+    
+    public List<Producto> metodoNativo(@Param("precioInf") double precioInf, @Param("precioSup") double precioSup);
 }

@@ -8,8 +8,7 @@ import com.tienda.domain.Categoria;
 
 @Data //Para decirle a la clase que es una clase de datos
 @Entity //
-@Table(name="producto") //
-// de mysql
+@Table(name="producto") //de mysql
 public class Producto implements Serializable {
     
     private static final long serialVersionUID = 1L;

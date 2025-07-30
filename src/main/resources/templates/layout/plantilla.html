@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:th="http://www.thymeleaf.org">
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity6">
     <head th:fragment="head">
         <title>TechShop</title>
         <meta charset="UTF-8"/>
@@ -19,9 +20,22 @@
                         <span class="navbar-toggler-icon"></span>
                     </button>
                     <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
-                        <ul class="navbar-nav">
+                        <ul class="navbar-nav" sec:authorize='hasRole("ROLE_VENDEDOR")'> <!--Solo el usuario con el rol del vendedor lo va a poder ver-->
                             <li class="nav-item px-2"><a class="nav-menu-link nav-link" th:href="@{/categoria/listado}">[[#{plantilla.categorias}]]</a></li>
                             <li class="nav-item px-2"><a class="nav-menu-link nav-link" th:href="@{/producto/listado}">[[#{plantilla.productos}]]</a></li>
+
+                            <li class="nav-item dropdown" sec:authorize='hasRole("ROLE_ADMIN")'> <!--Solo el usuario con admin-->
+                                <a class="nav-link dropdown-toggle" 
+                                   data-bs-toggle="dropdown" 
+                                   href="#" 
+                                   role="button" 
+                                   aria-expanded="false">[[#{plantilla.pruebas}]]</a>
+                                <ul class="dropdown-menu dropdown-menu-dark">
+                                    <li><a class="dropdown-item" th:href="@{/pruebas/listado}">[[#{plantilla.asociaciones}]]</a></li>
+                                    <li><a class="dropdown-item" th:href="@{/pruebas/listado2}">[[#{plantilla.consultas}]]</a></li>
+                                </ul>
+                            </li>
+
                             <li class="nav-item px-2"><a class="nav-menu-link nav-link" th:href="@{/usuario/listado}">[[#{plantilla.usuarios}]]</a></li>
                         </ul>
                         <div class="col-md-3">
@@ -29,7 +43,33 @@
                                 <li class="nav-item px-2"><a class="nav-link" th:href="@{/(lang=es)}">ES</a></li>
                                 <li class="nav-item px-2"><a class="nav-link" th:href="@{/(lang=en)}">EN</a></li>
                             </ul>
-                        </div>
+                        </div> 
+                        
+                        <ul class="navbar-nav" sec:authorize="!isAuthenticated()"> 
+                            <li class="nav-item"> 
+                                <a class="nav-link" th:href="@{/login}"> 
+                                    <i class="fas fa-sign-in-alt"></i> 
+                                </a> 
+                            </li> 
+                        </ul> 
+
+                        <ul class="navbar-nav" sec:authorize="isAuthenticated()"> 
+                            <li class="nav-item text-white my-auto"> 
+                                <img th:src="@{${session.usuarioImagen}}" 
+                                     alt="Imágen del usuario" 
+                                     height="40" 
+                                     class="rounded-circle"/> 
+                                <span sec:authentication="name">Santi</span> 
+                            </li> 
+                            <li class="nav-item my-auto"> 
+                                <form method="post" th:action="@{/logout}"> 
+                                    <button class="btn btn-dark"> 
+                                        <i class="fas fa-sign-out-alt"></i> 
+                                    </button> 
+                                </form> 
+                            </li> 
+                        </ul> 
+
                     </div>
                 </div>
             </nav>
