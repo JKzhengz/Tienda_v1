@@ -42,7 +42,7 @@ public class UsuarioDetailsServiceImpl implements UsuarioDetailsService, UserDet
         //Se van a recuperar los roles del usuario y se crean los roles ya como seguridad de Spring 
         var roles = new ArrayList<GrantedAuthority>(); 
         for (Rol rol : usuario.getRoles()) { 
-            roles.add(new SimpleGrantedAuthority(rol.getNombre())); 
+            roles.add(new SimpleGrantedAuthority(rol.getNombre()));
         } 
         //Se retorna un User (de tipo UserDetails) 
         return new User(usuario.getUsername(),usuario.getPassword(),roles); 
